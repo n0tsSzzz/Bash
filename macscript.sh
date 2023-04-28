@@ -46,10 +46,9 @@ fn_url() {
     dozens=$(( $framescounter % 100 / 10 ))
     hundreds=$(( $framescounter % 1000 / 100 ))
     thousands=$(( $framescounter % 10000 / 1000 ))
-    open $dir/$d$c$b$a.jpg
+    xdg-open $dir/$d$c$b$a.jpg
     sleep 0.5
     clear
-    osascript -e 'quit app "Preview"'
   done
 }
 
@@ -61,10 +60,9 @@ fn_path() {
     dozens=$(( $framescounter % 100 / 10 ))
     hundreds=$(( $framescounter % 1000 / 100 ))
     thousands=$(( $framescounter % 10000 / 1000 ))
-    open $dir/$d$c$b$a.jpg
+    xdg-open $dir/$d$c$b$a.jpg
     sleep 0.5
     clear
-    osascript -e 'quit app "Preview"'
   done
 }
 
@@ -114,13 +112,13 @@ mainmenu() {
   read -r ansmenu
   case $ansmenu in
     1|Url|url|URL)
-      urlsubmenu;;
+      urlsubmenu ;;
     2|Path|path|PATH)
-      pathsubmenu;;
+      pathsubmenu ;;
     0|Exit|exit|EXIT)
-      fn_bye;;
+      fn_bye ;;
     *)
-      fn_fail;;
+      fn_fail ;;
   esac
 }
 
