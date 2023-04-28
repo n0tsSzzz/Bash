@@ -46,9 +46,10 @@ fn_url() {
     dozens=$(( $framescounter % 100 / 10 ))
     hundreds=$(( $framescounter % 1000 / 100 ))
     thousands=$(( $framescounter % 10000 / 1000 ))
-    xdg-open $dir/$d$c$b$a.jpg
+    open $dir/$d$c$b$a.jpg
     sleep 0.5
     clear
+    osascript -e 'quit app "Preview"'
   done
 }
 
@@ -60,9 +61,10 @@ fn_path() {
     dozens=$(( $framescounter % 100 / 10 ))
     hundreds=$(( $framescounter % 1000 / 100 ))
     thousands=$(( $framescounter % 10000 / 1000 ))
-    xdg-open $dir/$d$c$b$a.jpg
+    open $dir/$d$c$b$a.jpg
     sleep 0.5
     clear
+    osascript -e 'quit app "Preview"'
   done
 }
 
