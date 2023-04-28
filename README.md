@@ -41,13 +41,13 @@ mainmenu() {
   read -r ansmenu
   case $ansmenu in
     1|Url|url|URL)
-      urlsubmenu;;
+      urlsubmenu ;;
     2|Path|path|PATH)
-      pathsubmenu;;
+      pathsubmenu ;;
     0|Exit|exit|EXIT)
-      fn_bye;;
+      fn_bye ;;
     *)
-      fn_fail;;
+      fn_fail ;;
   esac
 }
 ```
