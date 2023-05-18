@@ -1,6 +1,7 @@
 #!/bin/bash
 
-str='58 40 41 123 32 58 124 58 38 32 125 59 58'
+[[ -z $1 ]] && { echo 'No input provided'; exit 1; }
+str=$(cat $1)
 zxc=''
 
 for number in $str; do
